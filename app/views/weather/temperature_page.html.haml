@@ -1,0 +1,7 @@
+- if params[:temperature_status]
+  %p
+    = params[:temperature_status]
+
+= form_for :weather, url: 'check_weather' do |f|
+  = f.text_field :p_code
+  = f.submit 'Check weather'
